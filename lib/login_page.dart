@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
-
-
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
@@ -16,7 +14,7 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height;
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Center(
@@ -24,7 +22,18 @@ class _LoginPageState extends State<LoginPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(padding: EdgeInsets.only(top: 30)),
-              Image.asset("assets/logo.png" , height: 80),
+              Container(
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(17)),
+
+
+                child: Image.asset("assets/logo.png" , height: 80),
+
+
+
+              ),
+
               Padding(padding: EdgeInsets.only(top: 10)),
               Text("Akademi+" ,style: TextStyle(
                 fontSize: 17,
@@ -92,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
       onSaved: (value) {
         email = value!;
       },
-      style: TextStyle(color: Colors.white),
+      style: TextStyle(color: Colors.black),
 
       decoration: InputDecoration(
         filled: true,
@@ -118,7 +127,7 @@ class _LoginPageState extends State<LoginPage> {
         password = value!;
       },
       obscureText: true,
-      style: TextStyle(color: Colors.white),
+      style: TextStyle(color: Colors.black),
 
       decoration: InputDecoration(
         filled: true,
@@ -161,7 +170,7 @@ class _LoginPageState extends State<LoginPage> {
       try {
         final userResult = await firebaseAuth.signInWithEmailAndPassword(
             email: email, password: password);
-        Navigator.pushReplacementNamed(context, "/homePage");
+        Navigator.pushReplacementNamed(context, "/selectionPage");
         print(userResult.user!.email);
       } catch (e) {
         print(e.toString());

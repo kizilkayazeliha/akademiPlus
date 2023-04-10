@@ -2,14 +2,14 @@
 import 'package:flutter/material.dart';
 
 
-class SelectionPageFlutter extends StatefulWidget {
-  const SelectionPageFlutter({Key? key}) : super(key: key);
+class SelectionPageModel extends StatefulWidget {
+  const SelectionPageModel({Key? key}) : super(key: key);
 
   @override
-  State<SelectionPageFlutter> createState() => _SelectionPageFlutterState();
+  State<SelectionPageModel> createState() => _SelectionPageModelState();
 }
 
-class _SelectionPageFlutterState extends State<SelectionPageFlutter> {
+class _SelectionPageModelState extends State<SelectionPageModel> {
   int _currentIndex = 0;
 
   @override
@@ -18,7 +18,7 @@ class _SelectionPageFlutterState extends State<SelectionPageFlutter> {
       appBar: AppBar(
         backgroundColor: Color(0xFF4283F1),
         leading: BackButton(
-          onPressed: () => Navigator.pushReplacementNamed(context, "/selectionPageModel")
+          onPressed: () => Navigator.pushReplacementNamed(context, "/selectionPageFlutter")
         ),
         elevation: 0,
 
@@ -29,7 +29,7 @@ class _SelectionPageFlutterState extends State<SelectionPageFlutter> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(padding: EdgeInsets.only(top: 10)),
-              Text(" Flutter Testleri ",
+              Text(" Flutter Kurulum",
                   style: TextStyle(color: Colors.white , fontWeight: FontWeight.bold , fontSize: 25)
               ),
               Padding(
@@ -47,10 +47,11 @@ class _SelectionPageFlutterState extends State<SelectionPageFlutter> {
                               crossAxisAlignment: CrossAxisAlignment.stretch,
                               children: <Widget>[
                                 SizedBox(
+
                                   width: double.infinity,
                                   child: new ElevatedButton(
                                     child: Text(
-                                      "Modül1 : Flutter Kurulumu ",
+                                      "Flashcard 1",
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontFamily: 'Raleway',
@@ -59,10 +60,11 @@ class _SelectionPageFlutterState extends State<SelectionPageFlutter> {
                                       textAlign: TextAlign.center,
                                     ),
                                     onPressed: () {
-                                      Navigator.pushReplacementNamed(context, "/selectionPageModel");
+                                      Navigator.pushReplacementNamed(context, "/selectionFlashCard");
                                     },
                                     style: ElevatedButton.styleFrom(
-                                        minimumSize: Size(75,100) // put the width and height you want
+                                        primary: Color(0xFFF8B905),
+                                        minimumSize: Size(75,100)
                                     ),
                                   ),
 
@@ -73,7 +75,7 @@ class _SelectionPageFlutterState extends State<SelectionPageFlutter> {
                                   width: double.infinity,
                                   child: new ElevatedButton(
                                     child: Text(
-                                      "Modül 2: Dart Dili ve IDE Tanıma",
+                                      "Quiz 1",
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontFamily: 'Raleway',
@@ -81,41 +83,20 @@ class _SelectionPageFlutterState extends State<SelectionPageFlutter> {
                                       ),
                                       textAlign: TextAlign.center,
                                     ),
-                                    onPressed: () {
-                                      Navigator.pushReplacementNamed(context, "/selectionLeardBoard");
-                                    },
+                                    onPressed: () {},
                                     style: ElevatedButton.styleFrom(
-                                        minimumSize: Size(75,100) // put the width and height you want
+                                        primary: Color(0xFF34A652),
+                                        minimumSize: Size(75,100)
                                     ),
                                   ),
                                 ),
                                 Padding(padding: EdgeInsets.only(top: 20)),
                                 SizedBox(
-                                  width: double.infinity,
-                                  child: new ElevatedButton(
-                                    child: Text(
-                                      "Modül 3: Dart Dilini Derinlemesine Tanıma",
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontFamily: 'Raleway',
-                                        fontSize: 22.0,
-                                      ),
-                                      textAlign: TextAlign.center,
-                                    ),
-                                    onPressed: () {
 
-                                    },
-                                    style: ElevatedButton.styleFrom(
-                                        minimumSize: Size(75,100) // put the width and height you want
-                                    ),
-                                  ),
-                                ),
-                                Padding(padding: EdgeInsets.only(top: 20)),
-                                SizedBox(
                                   width: double.infinity,
                                   child: new ElevatedButton(
                                     child: Text(
-                                      "Modül 4: Dart ile Nesne Tabanlı Programlama",
+                                      "Flashcard 2",
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontFamily: 'Raleway',
@@ -125,16 +106,19 @@ class _SelectionPageFlutterState extends State<SelectionPageFlutter> {
                                     ),
                                     onPressed: () {},
                                     style: ElevatedButton.styleFrom(
-                                        minimumSize: Size(75,100) // put the width and height you want
+                                        primary: Color(0xFFF8B905),
+                                        minimumSize: Size(75,100)
                                     ),
                                   ),
+
+
                                 ),
                                 Padding(padding: EdgeInsets.only(top: 20)),
                                 SizedBox(
                                   width: double.infinity,
                                   child: new ElevatedButton(
                                     child: Text(
-                                      "Modül 5: Collection'lar",
+                                      "Quiz 2",
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontFamily: 'Raleway',
@@ -144,16 +128,18 @@ class _SelectionPageFlutterState extends State<SelectionPageFlutter> {
                                     ),
                                     onPressed: () {},
                                     style: ElevatedButton.styleFrom(
-                                        minimumSize: Size(75,100) // put the width and height you want
+                                        primary: Color(0xFF34A652),
+                                        minimumSize: Size(75,100)
                                     ),
                                   ),
                                 ),
                                 Padding(padding: EdgeInsets.only(top: 20)),
                                 SizedBox(
+
                                   width: double.infinity,
                                   child: new ElevatedButton(
                                     child: Text(
-                                      "Modül 6: Flutter'a Giriş",
+                                      "Flashcard 3",
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontFamily: 'Raleway',
@@ -163,16 +149,19 @@ class _SelectionPageFlutterState extends State<SelectionPageFlutter> {
                                     ),
                                     onPressed: () {},
                                     style: ElevatedButton.styleFrom(
-                                        minimumSize: Size(75,100) // put the width and height you want
+                                        primary: Color(0xFFF8B905),
+                                        minimumSize: Size(75,100)
                                     ),
                                   ),
+
+
                                 ),
                                 Padding(padding: EdgeInsets.only(top: 20)),
                                 SizedBox(
                                   width: double.infinity,
                                   child: new ElevatedButton(
                                     child: Text(
-                                      "Modül 7: StatefulWidget ve StatelessWidget",
+                                      "Quiz 3",
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontFamily: 'Raleway',
@@ -182,16 +171,18 @@ class _SelectionPageFlutterState extends State<SelectionPageFlutter> {
                                     ),
                                     onPressed: () {},
                                     style: ElevatedButton.styleFrom(
-                                        minimumSize: Size(75,100) // put the width and height you want
+                                        primary: Color(0xFF34A652),
+                                        minimumSize: Size(75,100)
                                     ),
                                   ),
                                 ),
                                 Padding(padding: EdgeInsets.only(top: 20)),
                                 SizedBox(
+
                                   width: double.infinity,
                                   child: new ElevatedButton(
                                     child: Text(
-                                      "Modül 8: Widget Ağacı",
+                                      "Flashcard 4",
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontFamily: 'Raleway',
@@ -201,16 +192,19 @@ class _SelectionPageFlutterState extends State<SelectionPageFlutter> {
                                     ),
                                     onPressed: () {},
                                     style: ElevatedButton.styleFrom(
-                                        minimumSize: Size(75,100) // put the width and height you want
+                                        primary: Color(0xFFF8B905),
+                                        minimumSize: Size(75,100)
                                     ),
                                   ),
+
+
                                 ),
                                 Padding(padding: EdgeInsets.only(top: 20)),
                                 SizedBox(
                                   width: double.infinity,
                                   child: new ElevatedButton(
                                     child: Text(
-                                      "Modül 9: Layout",
+                                      "Quiz 4",
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontFamily: 'Raleway',
@@ -220,16 +214,18 @@ class _SelectionPageFlutterState extends State<SelectionPageFlutter> {
                                     ),
                                     onPressed: () {},
                                     style: ElevatedButton.styleFrom(
-                                        minimumSize: Size(75,100) // put the width and height you want
+                                        primary: Color(0xFF34A652),
+                                        minimumSize: Size(75,100)
                                     ),
                                   ),
                                 ),
                                 Padding(padding: EdgeInsets.only(top: 20)),
                                 SizedBox(
+
                                   width: double.infinity,
                                   child: new ElevatedButton(
                                     child: Text(
-                                      "Modül 10: Navigation",
+                                      "Flashcard 5",
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontFamily: 'Raleway',
@@ -239,16 +235,19 @@ class _SelectionPageFlutterState extends State<SelectionPageFlutter> {
                                     ),
                                     onPressed: () {},
                                     style: ElevatedButton.styleFrom(
-                                        minimumSize: Size(75,100) // put the width and height you want
+                                        primary: Color(0xFFF8B905),
+                                        minimumSize: Size(75,100)
                                     ),
                                   ),
+
+
                                 ),
                                 Padding(padding: EdgeInsets.only(top: 20)),
                                 SizedBox(
                                   width: double.infinity,
                                   child: new ElevatedButton(
                                     child: Text(
-                                      "Modül 11: Asenkron Programlama",
+                                      "Quiz 5",
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontFamily: 'Raleway',
@@ -258,10 +257,15 @@ class _SelectionPageFlutterState extends State<SelectionPageFlutter> {
                                     ),
                                     onPressed: () {},
                                     style: ElevatedButton.styleFrom(
-                                        minimumSize: Size(75,100) // put the width and height you want
+                                        primary: Color(0xFF34A652),
+                                        minimumSize: Size(75,100)
                                     ),
                                   ),
                                 ),
+                                Padding(padding: EdgeInsets.only(top: 20)),
+
+
+
                               ],
                             )),
                       ],
@@ -299,9 +303,9 @@ class _SelectionPageFlutterState extends State<SelectionPageFlutter> {
           ),
         ),
       ),
+
     );
   }
-
   void onTabTapped(int index) {
     if (index == 0) {
       Navigator.pushReplacementNamed(context, "/selectionProfil");
@@ -309,9 +313,6 @@ class _SelectionPageFlutterState extends State<SelectionPageFlutter> {
     } else if (index == 1) {
       // Home Page
       Navigator.pushReplacementNamed(context, "/selectionLeardBoard");
-    } else if (index == 2) {
-      // Leaderboard Page
-      Navigator.pushReplacementNamed(context, "/selectionProfil");
     }
     setState(() {
       _currentIndex = index;
