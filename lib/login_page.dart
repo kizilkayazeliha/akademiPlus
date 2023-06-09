@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+
+
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
   @override
@@ -72,6 +74,7 @@ class _LoginPageState extends State<LoginPage> {
                           Padding(padding: EdgeInsets.only(top: 20)),
                           signInButton(),
                           Padding(padding: EdgeInsets.only(top: 25)),
+
 
                         ],
                       ),
